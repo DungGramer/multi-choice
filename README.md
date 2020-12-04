@@ -1,4 +1,4 @@
-#TTC multi-choice example
+# TTC multi-choice example
 
 ## Project setup
 ```
