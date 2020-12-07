@@ -37,7 +37,7 @@ export default {
   .admin {
     .main {
       padding: 5rem 0;
-      background-color: rgb(249, 249, 249);
+      background-color: rgb(240,240,247);
       margin-right: auto;
       width: 100%;
     }

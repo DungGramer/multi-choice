@@ -6,8 +6,9 @@ import Dashboard from "../views/admin/DashBoard/index";
 import Users from "../views/admin/Users/index";
 import Questions from "../views/admin/Questions/index";
 import Results from "../views/admin/Results/index";
-Category;
-import Category from "../views/admin/Category/index";
+import Categories from "../views/admin/Category/index";
+import Seasons from "../views/admin/Seasons/index";
+import Levels from "../views/admin/Levels/index";
 
 Vue.use(VueRouter);
 
@@ -28,9 +29,9 @@ const routes = [
     component: Dashboard
   },
   {
-    path: "/category",
-    name: "Category",
-    component: Category
+    path: "/categories",
+    name: "Categories",
+    component: Categories
   },
   {
     path: "/users",
@@ -46,6 +47,16 @@ const routes = [
     path: "/results",
     name: "Results",
     component: Results
+  },
+  {
+    path: "/seasons",
+    name: "Seasons",
+    component: Seasons
+  },
+  {
+    path: "/levels",
+    name: "Levels",
+    component: Levels
   }
 ];
 
