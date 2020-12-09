@@ -1,11 +1,23 @@
 <template>
-  <div class="header d-flex">
-    <div class="header--left ">
-      <img class="ttc-logo" :src="images.TTCLogo" alt="TTC logo" />
-    </div>
-    <div class="header--right" @click="logout()">
-      <span class="user-name">Hồ Sỹ Huy</span>
-      <img class="auth-avt" :src="images.VueLogo" height="100%" alt="" />
+  <div class="header d-flex align-items-center">
+    <div class="container d-flex">
+      <div class="header--left menu-icon" @click="openSidebar()">
+        <i class="far fa-bars"></i>
+      </div>
+      <div class="header--right">
+        <b-dropdown
+          size="lg"
+          variant="link"
+          toggle-class="text-decoration-none"
+          no-caret
+        >
+          <template #button-content>
+            <img class="auth-avt" :src="images.VueLogo" height="100%" alt="" />
+            <span class="user-name">Hồ Sỹ Huy</span>
+          </template>
+          <b-dropdown-item class="logout" href="#">Đăng xuất</b-dropdown-item>
+        </b-dropdown>
+      </div>
     </div>
   </div>
 </template>
@@ -19,6 +31,12 @@ export default {
     return {
       images: { VueLogo, TTCLogo }
     };
+  },
+  method: {
+    //? Click menu bar để mở
+    openSidebar() {
+      return;
+    }
   }
 };
 </script>
@@ -27,28 +45,46 @@ export default {
 <style lang="scss" scoped>
 .header {
   width: 100%;
-  border: 1px solid rgb(249, 249, 249);
-  max-height: 4rem;
-
+  border: var(--border);
+  align-items: center;
+  height: calc(4rem + 1px);
+  background-color: white;
+  // position: absolute;
   img {
     height: 100%;
   }
   &--left {
-    max-width: 15rem;
+    /*     max-width: 15rem;
     margin-right: auto;
-    margin-left: 2rem;
+		margin-left: 2rem; */
+    align-items: center;
+    display: flex;
+    i {
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
   }
   &--right {
     margin-left: auto;
     cursor: pointer;
-
-    .user-name {
-      margin-right: 1rem;
-    }
-    .auth-avt {
-      border-radius: 50%;
-      padding: 10px 0;
-    }
+  }
+}
+.menu {
+  align-items: center;
+  display: flex;
+  i {
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+}
+.auth-avt {
+  margin-right: 1rem;
+  border-radius: 50%;
+  width: 30px;
+}
+@media screen and (min-width: 992px) {
+  .menu-icon {
+    visibility: hidden;
   }
 }
 </style>

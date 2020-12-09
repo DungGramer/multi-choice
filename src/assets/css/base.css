@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://dunggramer.github.io/font-awesome-pro/css/all.min.css');
+
+:root {
+	--black: #4f4f4f;
+	--blue: #6E79AF;
+	--blue-dark: #43425D;
+	--blue-background: #E5E8EF;
+	--green: #94D6A3;
+	--red: #DD3333;
+	--orange: #F67326;
+	--gray: #787878;
+
+	--background: #F6F7FA;
+	--border-color: #f2f2f2;
+	--border: thin solid var(--border-color);
+	--hover: #F6F6F6;
+	--text-selected: #2B366A;
+	--shadow:0 2px 6px rgba(0, 0, 0, 0.3);
+	--font: 'Nunito', sans-serif;
+}
+
+body {
+	font: 100%/1.618 var(--font);
+	color: var(--black);
+	background-color: var(--background);
+}
+input,
+button,
+select,
+textarea {
+	font-family: var(--font);
+}
+p,
+span {
+	text-align: justify;
+}

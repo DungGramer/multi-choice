@@ -1,13 +1,9 @@
 <template>
   <div id="app">
     <div v-if="true" class="admin">
+      <AppSidebar />
       <AppHeader />
-      <div class="sidebar d-flex">
-        <AppSidebar />
-        <div class="main">
-          <router-view />
-        </div>
-      </div>
+      <Page />
     </div>
     <div v-else class="client">
       <router-view />
@@ -18,32 +14,13 @@
 <script>
 import AppHeader from "./components/Header";
 import AppSidebar from "./components/Sidebar";
+import Page from "./components/Page";
 export default {
   components: {
     AppHeader,
-    AppSidebar
+    AppSidebar,
+    Page
   },
   created() {}
 };
 </script>
-
-<style lang="scss" scoped>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  .admin {
-    .main {
-      padding: 5rem 0;
-      background-color: rgb(240,240,247);
-      margin-right: auto;
-      width: 100%;
-    }
-    .sidebar {
-      margin-right: auto;
-    }
-  }
-}
-</style>

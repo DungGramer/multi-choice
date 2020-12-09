@@ -46,3 +46,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/*------------------------------------*\
+	#Custom
+\*------------------------------------*/
+img{
+	object-fit: cover;
+}
+button{
+	background-color: transparent;
+}
+img{
+	object-fit: cover;
+}
+img, embed, object, video {
+	max-width: 100%;
+}
