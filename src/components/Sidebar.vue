@@ -96,10 +96,11 @@ export default {
 }
 #sidebar {
   position: fixed;
+  z-index: 9;
   top: 0;
   left: 0;
   height: 100vh;
-  width: 5vw;
+  width: 72px;
   background-color: white;
   border: var(--border);
   transition: width 0.25s ease;
@@ -162,7 +163,7 @@ export default {
     visibility: hidden;
   }
   &:hover {
-    width: 18vw;
+    width: 250px;
     .title {
       visibility: initial;
     }
